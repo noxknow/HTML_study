@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Id</title>
+
+    <style>
+        #myHeader {
+            background-color : lightblue;
+            padding : 40px;
+            text-align : center;
+        }
+    </style>
+</head>
+<body>
+    <h2>id 속성</h2>
+    <p>CSS를 사용하여 id가 "myHeader"인 요소의 스타일을 지정합니다.</p>
+
+    <h1 id = "myHeader">컨텐츠 제목</h1>
+    <button onclick = "displayResult()">내용 변경</button>
+
+    <script>
+        function displayResult() {
+            let myHeader =  document.getElementById("myHeader");
+            myHeader.innerHTML = "즐거운 점심시간이 되세요.";
+        }
+    </script>
+</body>
+</html>
