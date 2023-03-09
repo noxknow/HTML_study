@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스</title>
+
+    <style>
+        .city {
+            background-color: tomato;
+            color : white;
+            border : 2px solid black;
+            margin : 20px;
+            padding : 20px;
+        }
+
+        .country {
+            font-size : 150%;
+            font-weight : bold;
+        }
+
+        .black {
+            color : black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick = "hideElements()">요소 숨기기</button>
+        <button onclick = "appearElements()">요소 표시하기</button>
+    </div>
+    <div class = "city main">
+        <h2 class = "capital">런던</h2>
+        <p>런던은 <span class = "country">영국</span>의 수도입니다.</p>
+    </div>
+    <div class = "city">
+        <h2 class = "capital">파리</h2>
+        <p class = "black">파리는 <span class = "country">프랑스</span>의 수도입니다.</p>
+    </div>
+    <div class = "city">
+        <h2 class = "capital">서울</h2>
+        <p class = "black">서울은 <span class = "country">한국</span>의 수도입니다.</p>
+    </div>
+
+    <script>
+        function hideElements() {
+            let x = document.getElementsByClassName("capital");
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+        }
+
+        function appearElements() {
+            let x = document.getElementsByClassName("capital");
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
