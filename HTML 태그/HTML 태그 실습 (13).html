@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 맵</title>
+</head>
+<body>
+    <img src = "./img/workplace.jpg" alt = "업무공간" usemap = "#workmap">
+
+    <map name = "workmap">
+        <area shape = "rect" coords = "30, 40, 270, 350" alt = "컴퓨터"
+            href = "https://www.samsung.com/sec/galaxybook/all-galaxybook/">
+        <area shape = "circle" coords = "340, 300, 45" alt = "커피"
+            href = "https://www.starbucks.co.kr/index.do">
+    </map><br>
+
+    <img src = "./img/workplace.jpg" alt = "업무공간" usemap = "#workmap2">
+
+    <map name = "workmap2">
+        <area shape = "circle" coords = "340, 300, 45" alt = "커피"
+            onclick = "myFunction()" href = "https://www.starbucks.co.kr/index.do">
+    </map>
+
+    <script>
+        function myFunction() {
+            alert("커피 컵을 클릭 했습니다.");
+        }
+    </script>
+</body>
+</html>
