@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+
+    <style>
+        * {
+            box-sizing : border-box;
+        }
+
+        body {
+            font-family : Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #666666;
+            padding : 30px;
+            text-align : center;
+            font-size : 35px;
+            color : white;
+        }
+
+        section {
+            display : flex;
+        }
+
+        nav {
+            flex : 1;
+            background-color: #cccccc;
+            padding : 20px;
+        }
+        nav ul {
+            list-style-type : none;
+            padding : 0;
+        }
+
+        article {
+            flex : 3;
+            background-color: #f1f1f1;
+            padding: 30px;
+        }
+
+        footer {
+            padding : 30px;
+            background-color: #777777;
+            text-align : center;
+            color : white;
+        }
+
+        @media (max-width : 600px) {
+            section {
+                flex-direction : column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>도시</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href = "#">런던</a></li>
+                <li><a href = "#">파리</a></li>
+                <li><a href = "#">서울</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>런던</h1>
+            <p>작고 있으며, 때까지 피어나는 그리하였는가? 전인 트고, 황금시대를 구할 사람은 사랑의 돋고, 같지 영락과 것이다. 것이다.보라, 평화스러운 있는 칼이다. 인간의 우는 이는 만천하의 예수는 풍부하게 봄바람이다. 피고, 것은 쓸쓸한 살았으며, 인도하겠다는 얼마나 같은 내는 보배를 사막이다.
+            </p>
+            <p>
+            돋고, 뼈 설레는 교향악이다. 얼마나 가진 맺어, 소담스러운 끝까지 보배를 그들의 심장은 찬미를 힘있다. 때까지 싹이 자신과 이 이상의 얼마나 넣는 방황하여도, 아니다. 시들어 것이 길을 하는 대고, 있는 끝에 든 뿐이다. 가슴이 바이며, 청춘의 있는 너의 풍부하게 뿐이다. 살 바로 앞이 위하여서. 예수는 피고, 찾아다녀도, 든 이상의 사랑의 수 것이다.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <span>바닥글</span>
+    </footer>
+</body>
+</html>
