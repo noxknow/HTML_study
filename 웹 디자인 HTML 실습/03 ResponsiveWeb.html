@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹</title>
+
+    <style>
+        * {
+            box-sizing : border-box;
+        }
+
+        body {
+            font-family : Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            background-color: #e5e5e5;
+            padding : 15px;
+            text-align: center;
+        }
+
+        section {
+            overflow : auto;
+        }
+
+        nav {
+            float : left;
+            width : 20%;
+            text-align: center;
+        }
+        nav a {
+            background-color: #e5e5e5;
+            display : block;
+            padding : 8px;
+            margin : 7px;
+            color : black;
+        }
+
+        article {
+            float : left;
+            width : 60%;
+            padding : 0 20px;
+        }
+
+        aside {
+            background-color: #e5e5e5;
+            width : 20%;
+            float : left;
+            padding : 15px;
+            margin-top : 7px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #e5e5e5;
+            text-align: center;
+            padding : 10px;
+            margin-top : 7px;
+        }
+
+        @media only screen and (max-width : 620px) {
+            nav, article, aside {
+                width : 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hello World!</h1>
+    </header>
+
+    <section>
+        <nav>
+            <a href = "#">Link1</a>
+            <a href = "#">Link2</a>
+            <a href = "#">Link3</a>
+            <a href = "#">Link4</a>
+        </nav>
+
+        <article>
+            <h1>로렌 입숨</h1>
+            <p>아침이 보고, 별 이름을 없이 계십니다. 하나에 하늘에는 우는 멀리 것은 노루, 
+								소학교 경, 버리었습니다. 사람들의 멀리 새겨지는 멀리 별 위에 하나에 버리었습니다. 
+								어머니, 불러 이런 나는 이 별을 무엇인지 옥 까닭입니다. 아름다운 않은 어머니 봅니다.
+								노새, 별이 많은 부끄러운 다하지 나는 동경과 까닭입니다.
+            </p>
+        </article>
+
+        <aside>
+            <h2>About</h2>
+            <p>고동을 인간의 충분히 것이다. 만천하의 곳으로 아니더면</p>
+        </aside>
+    </section>
+
+    <footer>
+        &copy;copyright w3schools.com
+    </footer>
+</body>
+</html>
