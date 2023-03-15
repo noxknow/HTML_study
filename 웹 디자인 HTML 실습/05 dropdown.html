@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 요소</title>
+</head>
+<body>
+    <h2>select 요소</h2>
+    <p>select 요소는 드롭다운 목록을 정의합니다.</p>
+    <form action = "./test.php">
+        <label for = "cars">자동차 선택 : </label>
+        <select id = "cars" name = "cars" size = 3>
+            <option value = "volvo">볼보</option>
+            <option value = "saab">사브</option>
+            <option value = "fiat" selected>피아트</option>
+            <option value = "huyendai">현대</option>
+        </select>
+        <input type = "submit">
+    </form>
+
+    <h2>textarea</h2>
+    <p>textarea 요소는 여러 줄 입력 필드를 정의합니다.</p>
+    <form action = "./handler.jsp">
+        <p>
+            <textarea name = "message" style = "width : 200px; height : 300px;">
+                고양이가 정원에서 놀고 있습니다.
+            </textarea>
+        </p>
+        <p>
+            <input type = "submit">
+        </p>
+    </form>
+
+    <h2>button 요소</h2>
+    <button type = "button" onclick = "alert('환영합니다.')">누르세요</button>
+
+    <h2>fieldset으로 Form Data 그룹화</h2>
+    <p>
+        fieldset요소로 양식에서 관련 데이터를 그룹화하는데
+        사용되며 legend요소는 fieldset요소에 대한 캡션을 정의합니다.
+    </p>
+    <form action = "./handler.jsp">
+        <fieldset>
+            <label for = "txtid">아이디 : </label><br>
+            <input type = "text" id = "txtid" name = "id"><br>
+            <label for = "password">암호 : </label><br>
+            <input type = "password" id = "password" name = "password">
+
+            <p><button type = "submit">로그인</button></p>
+        </fieldset>
+    </form>
+
+    <h2>datalist 요소</h2>
+    <p>datalist 요소는 input 요소에 대한 사전 정의된 옵션 목록을 지정합니다.</p>
+    <form action = "./handler.jsp">
+        <input list = "browsers" name = "browser">
+        <datalist id = "browsers">
+            <option value = "인터넷 익스플로러"></option>
+            <option value = "파이어폭스"></option>
+            <option value = "크롬"></option>
+            <option value = "오페라"></option>
+            <option value = "사파리"></option>
+        </datalist>
+        <button type = "submit">전송</button>
+    </form>
+
+    <h2>output 요소</h2>
+    <p>output 요소는 계산 결과를 나타냅니다.</p>
+    <!-- 0 <input type = "range" id = "a" name = "a" value = "50"> 100 을
+
+        <input type = "range" id = "a" name = "a" value = "50"
+        oninput = "aValue.value = a.value">(<output id = "aValue">50</output>)로
+        한다면 막대기의 값에 따라 값이 옆에 나오게 된다.
+    -->
+    <form action = "./handler.jsp" oninput = "add()">
+        0 <input type = "range" id = "a" name = "a" value = "50"> 100
+        + <input type = "number" id = "b" name = "b" value = "50"> =
+        <output id = "x" name = "x" for = "a b"></output> 
+        <p><button type = "submit">제출</p>
+    </form>
+    <!-- 이런식으로 jsp 함수 만들어서 계산해줘도 된다 이때는
+    oninput = "add()" 로 해주면 적용된다.-->
+    <script>
+        function add() {
+            let a = document.getElementById("a"); // id가 a인곳의 값을 가져온다는 의미
+            let b = document.getElementById("b");
+            let x = document.getElementById("x");
+
+            x.value = parseInt(a.value) + parseInt(b.value);
+        }
+    </script>
+		
+		<!-- 다른 버젼-->
+		<h2>output 요소</h2>
+    <p>output 요소는 계산 결과를 나타냅니다.</p>
+    <form action = "./handler.jsp" oninput = "x.value = parseInt(a.value) + parseInt(b.value)">
+        <input type = "range" id = "a" name = "a" value = "50"
+        oninput = "aValue.value = a.value">(<output id = "aValue">50</output>)
+        + <input type = "number" id = "b" name = "b" value = "50"> =
+        <output id = "x" name = "x" for = "a b"></output> 
+        <p><button type = "submit">제출</p>
+    </form>
+</body>
+</html>
