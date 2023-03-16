@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오</title>
+</head>
+<body>
+    <div style = "text-align : center;">
+        <!-- 직접 트는 방식은 controls -->
+        <video width = "1280" height = "720" id = "video" autoplay muted>
+            <source src = "./movie/bang.mp4" type = "video/mp4">
+            <source src = "./movie/bang.webm" type = "video/webm">
+            당신의 브라우저는 video 태그를 지원하지 않습니다.
+        </video><br>
+        <button type = "button" onclick = "playPause()">재생/일시정지</button>
+        <button type = "button" onclick = "changeBig()">크게</button>
+        <button type = "button" onclick = "changeSmall()">작게</button>
+        <button type = "button" onclick = "changeNormal()">원래 크기</button>
+    </div>
+    <script>
+        let video = document.getElementById("video");
+        function playPause() {
+            if(video.paused){
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        function changeBig() {
+            video.width = 1440;
+        }
+
+        function changeSmall() {
+            video.width = 720;
+        }
+        function changeNormal() {
+            video.width = 1280;
+        }
+    </script>
+</body>
+</html>
